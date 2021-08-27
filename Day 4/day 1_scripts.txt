@@ -1,0 +1,394 @@
+# 1. My first code
+print("Hello world")
+
+
+# 2. Interpret your R code 
+6 -
+5
+
+# 3. Basic Calculator in R 
+
+3 + 2
+
+3 - 2
+
+3 * 2 
+
+3 / 2
+
+3 %% 2
+
+
+# 4. Logical & Relational Operator in R
+op1 <- c(0,1,2)
+op2 <- c(1,2,3)
+
+op1 & op2
+
+op1 | op2
+
+op1 && op2
+
+op1 || op2
+
+! op1
+
+op1 > op2
+
+op1 < op2
+
+# 5. R Objects 
+
+die <- 1:6
+die
+
+Die <- 1:3
+Die
+
+ls()
+
+# 6. Element wise execution in R 
+
+die - 1
+
+die * 2
+
+die / 2
+
+die + 1:2
+
+die + 1:4
+
+# 7. R Vectors
+
+is.vector(die)
+
+a<- 1
+is.vector(a)
+
+length(die)
+
+length(a)
+
+# 8. Types of Vector
+
+a <- 1
+typeof(a)
+
+a <- 1L
+typeof(a)
+
+a <- "1"
+typeof(a)
+
+a <- TRUE
+typeof(a)
+
+a <- 1 + 2i
+typeof(a)
+
+# 9. Converting vector to n-dimensional array
+
+die <- 1:6
+dim(die) <- c(2,3)
+die
+
+dim(die) <- c(3,2)
+die
+
+# 10. Matrix in R
+
+die <- 1:6
+mat <- matrix(die,nrow=2)
+mat
+
+mat <- matrix(die,ncol=2)
+mat
+
+mat <- matrix(die,nrow=2,byrow = TRUE)
+mat
+
+# 10. Arrays in R
+
+arr <- array(0.0,3)
+arr
+
+arr <- array(0.0,c(2,3))
+arr
+
+arr <- array(0.0,c(2,3,4))
+arr
+
+# 11. Factors
+
+gender <- factor(c("male","male","female",'male',"female"))
+gender
+
+typeof(gender)
+
+attributes(gender)
+
+unclass(gender)
+
+# 12. Lists and Data frame
+
+list1 <- list(100:130,
+ "R",
+ list(TRUE,FALSE)
+ )
+
+list1
+
+# Data frame
+
+df <- data.frame(int=c(1:3),char=c("R","S","T"),logical=c(TRUE,FALSE,TRUE))
+df
+
+# 13. Conditional statement - if-else - nested-if-else
+
+a <- 5 
+b <- 4
+if( a > b){
+    print("A Win")
+ } else {
+    print("B win")
+ }
+
+a <- 5 
+b <- 5
+if( a > b){
+    print("A Win")
+ } else if( a < b) {
+    print("B win")
+ } else {
+    print("Tie")
+ }
+
+# 14. R code to demonstrate the use of for loop 
+   
+# using for loop
+for (val in 1:5)
+{
+    # statement 
+    print(val)
+} 
+
+
+# assigning strings to the vector
+week <- c('Sunday', 
+          'Monday', 
+          'Tuesday', 
+          'Wednesday',
+          'Thursday',
+          'Friday',
+          'Saturday')
+   
+# using for loop to iterate
+# over each string in the vector
+for (day in week)
+{
+      
+    # displaying each string in the vector
+    print(day)
+}
+
+# 15. R code to demonstrate while loop
+
+val = 1
+   
+# using while loop
+while (val <= 5 ) 
+{
+    # statements
+    print(val)
+    val = val + 1
+}
+
+
+# R program to illustrate 
+# application of while loop
+   
+# assigning value to the variable
+# whose factorial will be calculated
+n <- 5
+   
+# assigning the factorial variable
+# and iteration variable to 1
+factorial <- 1
+i <- 1
+   
+# using while loop
+while (i <= n) 
+{
+      
+    # multiplying the factorial variable
+    # with the iteration variable
+    factorial = factorial * i
+      
+    # incrementing the iteration variable 
+    i = i + 1
+}
+  
+# displaying the factorial
+print(factorial)
+
+# 16. Repeat - loop
+
+# R program to demonstrate the use of repeat loop
+   
+val = 1
+   
+# using repeat loop
+repeat
+{
+    # statements
+    print(val)
+    val = val + 1
+      
+    # checking stop condition
+    if(val > 5) 
+    { 
+        # using break statement
+        # to terminate the loop
+        break
+    }
+}
+
+
+# 17. Demonstration of sample() to simulate a die/dice
+
+die <- 1:6
+sample(x=die,size=1) # single die
+
+
+sample(x=die,size=2) # Pair of dice
+
+sample(x=die,size=2, replace=TRUE) # Dice with replacement
+
+# 18. Functions - To roll a pair of dice
+
+roll <- function() {
+     die <- 1:6
+     dice <- sample(x=die,size=2, replace=TRUE)
+     #dice
+     #print(dice)
+     sum(dice)
+}
+
+roll()
+
+# 19. Functions - With Arguments & default values
+
+roll2 <- function(bones) {
+     dice <- sample(x=bones,size=2, replace=TRUE)
+     #print(dice)
+     sum(dice)
+}
+
+roll2(bones=1:4)
+roll2()
+
+roll2 <- function(bones=1:6) {
+     dice <- sample(x=bones,size=2, replace=TRUE)
+     #print(dice)
+     sum(dice)
+}
+
+roll2(bones=1:4)
+roll2()
+
+# 20. Some popular Built-in functions
+
+a <- -4
+abs(a)
+
+a <- 4
+sqrt(a)
+
+a <- 4.5
+ceiling(a)
+
+floor(a)
+
+a <- 1:5
+mean(a)
+
+sd(a)
+
+median(a)
+
+range(a)
+
+sum(a)
+
+min(a)
+
+max(a)
+
+
+# 21. Importing Dataset and see the important details
+
+typeof(deck)
+
+str(deck)
+
+class(deck)
+
+dim(deck)
+
+head(deck)
+
+tail(deck)
+
+
+# 22. Selecting values - Indexing
+
+head(deck)
+
+deck[1,1]
+
+deck[1, 1:3]
+
+new <- deck[1, 1:3]
+new
+
+deck[-(2:52), 1:3]
+
+deck[1, ]
+
+deck[1, c("face", "suit", "value")]
+
+# 23. Dollar sign and double bracket
+
+deck$value
+
+mean(deck$value)
+
+lst <- list(numbers = c(1, 2), logical = TRUE, strings = c("a", "b", "c"))
+lst
+
+lst[1]
+
+lst$numbers
+
+mean(lst$numbers)
+
+mean(lst[1])
+
+mean(lst[[1]])
+
+# 24. Missing information - Handling NA
+
+x <- c(NA, 1:50)
+x
+
+mean(x)
+
+mean(x, na.rm = TRUE)
+
+NA == NA
+
+is.na(NA)
+
+vec <- c(1, 2, 3, NA)
+is.na(vec)
